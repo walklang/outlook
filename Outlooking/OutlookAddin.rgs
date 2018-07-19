@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {183e2438-7da4-4067-a4dc-a0616f91dbd4} = s 'OutlookAddin class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{1dc44e0a-22d9-4c7f-9a78-0d1df1b574ca}'
+			Version = s '1.0'
+		}
+	}
+}

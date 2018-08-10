@@ -14,3 +14,28 @@ HKCR
 		}
 	}
 }
+
+HKCU
+{
+    NoRemove Software
+    {
+        NoRemove Microsoft
+        {
+            NoRemove Office
+            {
+                NoRemove Outlook
+                {
+                    NoRemove Addins
+                    {
+                        'Outlooking.OutlookAddin'
+                        {
+                            val Description = s'Outlooking COM Addin'
+                            val FriendlyName = s'Outlooking COM Addin'
+                            val LoadBehavior = d'00000003'
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
